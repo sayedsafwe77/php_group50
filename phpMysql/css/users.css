@@ -1,0 +1,22 @@
+.fa-edit,
+.fa-trash {
+    font-size: 25px;
+}
+
+.fa-edit {
+    color: green;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-edit:hover {
+    cursor: pointer;
+    color: brown;
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: blue;
+}
