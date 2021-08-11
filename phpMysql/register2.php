@@ -74,8 +74,17 @@
 
         var xmlHttp = new XMLHttpRequest();
         let form_data = `gender=${gender}&username=${username}&password=${password}&email=${email}`;
-        xmlHttp.open( "GET", `https://localhost/phpMysql/register.php?${form_data}`, false ); // false for synchronous request
-        xmlHttp.send( );
+        xmlHttp.open( "POST", `https://localhost/php_group50/phpMysql/register.php`, true ); // false for synchronous request
+        xmlHttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        // xmlHttp.onreadystatechange = function() {//Call a function when the state changes.
+        //     if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        //         alert(xmlHttp.responseText);
+        //     }
+        // }      
+        
+        
+        xmlHttp.send(form_data);
 
         console.log(xmlHttp.responseText);
 
